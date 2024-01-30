@@ -3,6 +3,7 @@
 Notebook jupyter contendo os dados fornecidos pela Forbes sobre a Média e a Máxima salarial em TI.
 
 <h2> Gráficos utilizando Plotly </h2>
+<br> 
 
 ```Python
 import pandas as pd
