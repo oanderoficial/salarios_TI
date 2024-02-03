@@ -68,3 +68,25 @@ figura = px.bar(df, x='Cargo', y= ['Média salarial','máxima salarial'],
 figura.update_layout(yaxis=dict(tickformat="R$,.2f"))
 figura.show()
 
+````
+
+<br><br>
+
+```Python
+
+import pandas as pd 
+import plotly.express as px
+
+data = {'Cargo': ['Tech recruiters', 'Desenvolvedores seniores full stack', 'Desenvolvedores seniores front end', 'Desenvolvedores seniores back end', 'Desenvolvedores mobile seniores'], 
+        'Média salarial': [6250, 13000,13000,14000,14700],
+        'máxima salarial': [9250,15500,15275,16900,17500]}
+df = pd.DataFrame(data)
+
+figura = px.bar(df, x='Cargo', y= ['Média salarial','máxima salarial'],
+    title='Salários dos desenvolvedores',
+    color_discrete_map={'Média salarial':'#3CB371', 'máxima salarial': '#2F4F4F'},
+    template='plotly_dark',
+    barmode='group')
+
+figura.update_layout(yaxis=dict(tickformat="R$,.2f"))
+figura.show()
